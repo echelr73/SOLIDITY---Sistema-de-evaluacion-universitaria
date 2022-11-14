@@ -50,6 +50,51 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_idAlumno",
+						"type": "string"
+					}
+				],
+				"name": "Revision",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_idAlumno",
+						"type": "string"
+					}
+				],
+				"name": "VerNotas",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "VerSolicitudes",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "profesor",
 				"outputs": [
@@ -91,11 +136,11 @@
 	},
 	"sources": {
 		"NOTAS/notas.sol": {
-			"keccak256": "0x852cd495af1931b6e8ff26734eb0e61b33bb89a40ec99a18ccb940fae62fd7fd",
+			"keccak256": "0x9da25a4575e9950046c2f8f944aa505748fb68c6d7d73b62248bf83447993f63",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b3cdcc9e60d4f371f6fabeb6fedbd6097d1e4d85d1cc2c09d62493715b251dc0",
-				"dweb:/ipfs/QmYk5e1vVN8VcirAwg9BUbnUdFRUJH946xb854fxhyPqMm"
+				"bzz-raw://207423369b64477d0b52b772f7637c379c384e5fbf1c192f1d5b3f7884b1b04f",
+				"dweb:/ipfs/QmT4449HtvSEESqxnC3dySYJRYSXpnFrZ1z5mRtvPXRJke"
 			]
 		}
 	},

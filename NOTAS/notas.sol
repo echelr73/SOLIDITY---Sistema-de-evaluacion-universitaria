@@ -36,4 +36,28 @@ contract notas {
         require(profesor == _direccion, "No tienes permiso para ejecutar esta funcion");
         _;
     }
+
+    // Funcion para ver las notas de un alumno
+    function VerNotas(string memory _idAlumno) public view returns(uint){
+        // Hash de la Identificacion del alumno
+        bytes32 hash_idAlumno = keccak256(abi.encodePacked(_idAlumno));
+
+        // Nota asociada al hash del alumno
+        return Notas[hash_idAlumno];
+    }
+
+    // Funcion para pedir revision del examen
+    function Revision(string memory _idAlumno) public {
+        // Almacenamiento de la entidad del alumno
+        revisiones.push(_idAlumno);
+
+        // Emision del evento revision
+        emit evento_revision(_idAlumno);
+    }
+
+    //Ver las solicitudes de revision
+    function VerSolicitudes() public view UnicamenteProfesor(msg.sender) returns(string[] memory){
+        // Devolver los alumnos que pidieron revision
+        return revisiones;
+    }
 }
